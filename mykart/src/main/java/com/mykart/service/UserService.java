@@ -30,7 +30,6 @@ public class UserService {
 		try {
 			newUser.setCreatedAt(date.toString());
 			user=userRepository.save(newUser);
-			;
 		} catch (Exception e) {
 			throw new Exception(e.getMessage());
 		}
@@ -42,7 +41,7 @@ public class UserService {
 		User user;
 		try {
 			user=userRepository.findByUserNameAndPassword(userName, password);
-			System.out.println("USer"+user);
+			System.out.println("USer->"+user);
 		}catch(Exception e) {
 			throw new Exception(e.getMessage());
 		}
